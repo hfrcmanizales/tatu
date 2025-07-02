@@ -1,0 +1,118 @@
+/* Estilos Generales del Contenedor */
+.tattoo-portfolio-container {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Times New Roman', Times, serif; /* Fuente con toque gótico */
+  color: #f0f0f0; /* Color de texto claro para contraste */
+  background-color: #1a1a1a; /* Fondo oscuro */
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Sección del Logo */
+.tattoo-logo-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tattoo-logo {
+  width: 180px; /* Tamaño del logo */
+  height: auto;
+  filter: drop-shadow(0 0 8px rgba(255, 0, 255, 0.5)); /* Efecto de brillo/sombra gótico */
+  transition: transform 0.3s ease-in-out;
+}
+
+.tattoo-logo:hover {
+  transform: scale(1.05); /* Pequeño efecto al pasar el ratón */
+}
+
+.tattoo-title {
+  font-family: 'Metal Mania', cursive; /* Fuente gótica para el título (¡Necesitarás importarla!) */
+  font-size: 3.5em;
+  color: #d1b000; /* Color dorado/cobrizo */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  margin-top: 10px;
+}
+
+/* Sección de Descripción */
+.tattoo-description-section {
+  text-align: justify;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+.description-heading {
+  font-family: 'Cinzel Decorative', cursive; /* Fuente decorativa para el subtítulo */
+  font-size: 2em;
+  color: #ff00ff; /* Color magenta oscuro */
+  text-align: center;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.description-text {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.description-text strong {
+  color: #ffa500; /* Resaltar palabras clave */
+}
+
+/* --- Media Queries para Responsive Design --- */
+
+@media (min-width: 768px) {
+  .tattoo-portfolio-container {
+    flex-direction: row;
+
+    justify-content: center;
+    gap: 40px; /* Espacio entre el logo y la descripción */
+    padding: 40px;
+  }
+
+  .tattoo-logo-section {
+    flex: 0 0 auto; /* No crecerá ni se encogerá */
+    margin-bottom: 0;
+  }
+
+  .tattoo-logo {
+    width: 250px; /* Logo más grande en pantallas de escritorio */
+  }
+
+  .tattoo-title {
+    font-size: 4em;
+  }
+
+  .tattoo-description-section {
+    flex: 1; /* Ocupará el espacio restante */
+    max-width: 600px; /* Limita el ancho de la descripción en escritorio */
+  }
+}
+
+@media (max-width: 760px) {
+  .tattoo-portfolio-container {
+    padding: 15px;
+    margin-top: 250px;
+  }
+
+  .tattoo-logo {
+    width: 150px; /* Logo más pequeño en móviles */
+  }
+
+  .tattoo-title {
+    font-size: 2.5em;
+  }
+
+  .description-heading {
+    font-size: 1.5em;
+  }
+
+  .description-text {
+    font-size: 1em;
+  }
+}

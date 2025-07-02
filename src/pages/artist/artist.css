@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
+.artist-page {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #121212;
+  color: #d4af37;
+  padding: 2rem;
+  font-family: 'UnifrakturCook', cursive;
+}
+
+.artist-info {
+  flex: 1;
+  min-width: 250px;
+  text-align: center;
+  padding: 1rem;
+  border-right: 2px solid #5a2d82;
+}
+
+.artist-photo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #8e44ad;
+  margin-bottom: 1rem;
+}
+
+.artist-name {
+  font-size: 2rem;
+  color: #a882dd;
+  text-shadow: 0 0 5px #8e44ad;
+}
+
+.artist-gallery {
+  flex: 3;
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.tattoo-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 2px solid #5e3370;
+  transition: transform 0.3s ease;
+}
+
+.tattoo-img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .artist-page {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+  }
+
+  .artist-info {
+    border-right: none;
+    border-bottom: 2px solid #5a2d82;
+    margin-bottom: 1.5rem;
+  }
+
+  .artist-photo {
+    width: 140px;
+    height: 140px;
+  }
+}

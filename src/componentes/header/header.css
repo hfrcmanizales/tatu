@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+
+}
+
+
+/* Gothic Tattoo Style Header */
+.header {
+  font-family: 'UnifrakturCook', cursive;
+  background-color: #111;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  
+}
+
+.logo {
+  font-size: 2rem;
+  letter-spacing: 2px;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav a,
+.nav span {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.nav a:hover,
+.nav span:hover {
+  color: crimson;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #222;
+  border: 1px solid #444;
+  display: none;
+  flex-direction: column;
+  min-width: 160px;
+  z-index: 10;
+}
+
+.dropdown-menu a {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background-color: crimson;
+  color: #000;
+}
+
+.dropdown-menu.show {
+  display: flex;
+}
+
+/* Hamburger Icon */
+.menu-icon {
+  font-size: 2rem;
+  display: none;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    flex-direction: column;
+    background-color: #111;
+    width: 100%;
+    display: none;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .dropdown-menu {
+    position: static;
+    border: none;
+    background-color: #111;
+
+  }
+
+  .dropdown-menu.show {
+    display: flex;
+  }
+}
