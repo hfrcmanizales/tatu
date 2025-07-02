@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
-     "jsx": "react-jsx",
-     "lib": ["ES2015", "DOM"],
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true
+    "skipLibCheck": true,
+    "types": ["node"]
   }
 }
